@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const getNumeros = require('./controllers/getController')
+const getNumeros = require('./controller/getController')
 
 
 app.use('/', getNumeros)
