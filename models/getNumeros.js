@@ -14,12 +14,12 @@ async function getNumeros(pageIndex){
 
 async function getTodosNumeros(inicialPage){
   let todosNumeros = []
-  let temNumeros = true
+  let possuiNumeros = true
   let pageIndex = 1
-  while(temNumeros){
+  while(possuiNumeros){
     let numeros = await getNumeros(inicialPage + pageIndex)
     if(!numeros.numbers || pageIndex === 30 ){
-      temNumeros = false
+        possuiNumeros = false
     } else{
       todosNumeros = [...todosNumeros, ...numeros.numbers]    
       pageIndex += 1

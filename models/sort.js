@@ -8,7 +8,7 @@ function menorNumero(data){
     return menorNumero
   }
   
-  function removeNumero(data, menorNumero){
+  function removerNumero(data, menorNumero){
     const index = data.indexOf(menorNumero)
     data.splice(index, 1)
   }
@@ -20,7 +20,7 @@ function menorNumero(data){
     while(arrayVelho.length  > 0){
       numeroMenor = menorNumero(arrayVelho)
       arrayNovo.push(numeroMenor)
-      removeNumero(arrayVelho,numeroMenor)
+      removerNumero(arrayVelho,numeroMenor)
     }
     return arrayNovo
   }

@@ -1,6 +1,6 @@
 const  Router  = require('express').Router()
-const {getTodosNumeros} = require('../helpers/getNumeros')
-const ordenarNumero = require('../helpers/sort')
+const {getTodosNumeros} = require('../models/getNumeros')
+const ordenarNumero = require('../models/sort')
 
 
 
@@ -10,7 +10,7 @@ Router.get('/', async (req, res) => {
     const numerosOrdenados = ordenarNumero(numeros)
     res.status(200).send(numerosOrdenados)
   }catch(e){
-  res.status(500).json({ message: 'Erro ao solicitar os dados!'})
+  res.status(500).json({ message: 'Erro ao solicitar os dados'})
 }
 })
 
@@ -21,7 +21,7 @@ Router.get('/:page', async (req, res) => {
     const numerosOrdenados = ordenarNumero(numeros)
     res.status(200).send(numerosOrdenados)
   }catch(e){
-    res.status(500).json({ message: 'Erro ao solicitar os dados!'})
+    res.status(500).json({ message: 'Erro ao solicitar os dados'})
   }  
 })
 
