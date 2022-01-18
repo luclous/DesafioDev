@@ -10,7 +10,7 @@ Router.get('/', async (req, res) => {
     const numerosOrdenados = ordenarNumero(numeros)
     res.status(200).send(numerosOrdenados)
   }catch(e){
-  res.status(500).json({ message: 'Erro ao solicitar os dados'})
+  res.status(500).json({ message: 'Erro de dados'})
 }
 })
 
@@ -21,7 +21,7 @@ Router.get('/:page', async (req, res) => {
     const numerosOrdenados = ordenarNumero(numeros)
     res.status(200).send(numerosOrdenados)
   }catch(e){
-    res.status(500).json({ message: 'Erro ao solicitar os dados'})
+    res.status(500).json({ message: 'Erro de dados'})
   }  
 })
 
